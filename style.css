@@ -1,0 +1,754 @@
+/* =================================
+   Dashboard Global Style
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #f0fdf4
+    );
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   Header
+================================= */
+
+.dashboard-header {
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    padding: 18px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.logo {
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+.navbar {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+
+.navbar a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+
+    font-weight: 500;
+}
+
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    transform: translateY(-2px);
+}
+
+
+.navbar a.active {
+    background: white;
+
+    color: #4f46e5;
+}
+
+
+.navbar .logout {
+    background: #ef4444;
+}
+
+
+.navbar .logout:hover {
+    background: #dc2626;
+}
+
+
+/* =================================
+   Welcome Section
+================================= */
+
+.welcome {
+    margin: 35px auto;
+
+    width: 88%;
+
+    max-width: 1200px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #9333ea,
+        #db2777
+    );
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+}
+
+
+.welcome h1 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.welcome p {
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+
+.student-icon {
+    font-size: 70px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    padding: 20px;
+
+    border-radius: 50%;
+}
+
+
+/* =================================
+   Dashboard Grid
+================================= */
+
+.dashboard {
+    width: 88%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    padding-bottom: 40px;
+}
+
+
+/* =================================
+   Cards
+================================= */
+
+.card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+    border-top: 5px solid #6366f1;
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+.card h2 {
+    margin: 10px 0;
+
+    color: #312e81;
+}
+
+
+.card-icon {
+    font-size: 35px;
+}
+
+
+.card-description {
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   Course List
+================================= */
+
+.course-list {
+    list-style: none;
+}
+
+
+.course-list li {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 13px;
+
+    margin-bottom: 10px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+}
+
+
+.course-list button {
+    border: none;
+
+    background: #4f46e5;
+
+    color: white;
+
+    padding: 7px 13px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.course-list button:hover {
+    background: #3730a3;
+
+    transform: scale(1.05);
+}
+
+
+.course-list button:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+
+/* =================================
+   My Courses
+================================= */
+
+.my-courses {
+    list-style: none;
+}
+
+
+.my-courses li {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    background: #f0fdf4;
+
+    border-radius: 10px;
+}
+
+
+.my-courses strong {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+
+.my-courses small {
+    color: #64748b;
+}
+
+
+.my-course-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.status {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+.completed {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+.progress-status {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+
+.study-button {
+    border: none;
+    background: #7c3aed;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.study-button:hover {
+    background: #5b21b6;
+}
+
+
+.study-button:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+}
+
+
+/* =================================
+   Progress
+================================= */
+
+.progress-item {
+    margin-bottom: 20px;
+}
+
+
+.progress-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+}
+
+
+.progress-title strong {
+    color: #4f46e5;
+}
+
+
+progress {
+    width: 100%;
+
+    height: 12px;
+
+    appearance: none;
+}
+
+
+progress::-webkit-progress-bar {
+    background: #e2e8f0;
+
+    border-radius: 10px;
+}
+
+
+progress::-webkit-progress-value {
+    background: linear-gradient(
+        90deg,
+        #4f46e5,
+        #a855f7
+    );
+
+    border-radius: 10px;
+}
+
+
+/* =================================
+   Buttons
+================================= */
+
+.view-button,
+.profile-button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #7c3aed;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.view-button:hover,
+.profile-button:hover {
+    background: #5b21b6;
+}
+
+
+/* =================================
+   Profile
+================================= */
+
+.profile-info {
+    background: #eff6ff;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    line-height: 2;
+}
+
+
+.online {
+    color: #16a34a;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   Footer
+================================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #1e1b4b;
+
+    color: white;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   Site Header & Nav (index/login/register)
+================================= */
+
+header:not(.dashboard-header) {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 20px 6%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+header:not(.dashboard-header) h1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+header:not(.dashboard-header) nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+header:not(.dashboard-header) nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+header:not(.dashboard-header) nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+header:not(.dashboard-header) nav a.logout {
+    background: #ef4444;
+}
+
+header:not(.dashboard-header) nav a.logout:hover {
+    background: #dc2626;
+}
+
+
+/* =================================
+   Hero Section
+================================= */
+
+.hero {
+    text-align: center;
+    padding: 60px 6%;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #312e81;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #475569;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   Cards Section (Home Page)
+================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 88%;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.cards .card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #6366f1;
+    text-align: center;
+}
+
+.cards .card h3 {
+    color: #312e81;
+    margin-bottom: 8px;
+}
+
+.cards .card p {
+    color: #64748b;
+}
+
+
+/* =================================
+   Form Container (Login / Register)
+================================= */
+
+.container {
+    max-width: 420px;
+    margin: 60px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    text-align: center;
+    color: #312e81;
+    margin-bottom: 25px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.container input {
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.container input:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+.container button[type="submit"] {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container button[type="submit"]:hover {
+    background: #3730a3;
+}
+
+.container p {
+    text-align: center;
+    margin-top: 15px;
+    color: #475569;
+}
+
+.container p a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* =================================
+   Responsive Design
+================================= */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+
+    .dashboard-header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .welcome {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar a {
+        padding: 8px;
+
+        font-size: 13px;
+    }
+
+
+    .welcome {
+        width: 94%;
+
+        padding: 25px 15px;
+    }
+
+
+    .dashboard {
+        width: 94%;
+    }
+
+
+    .card {
+        padding: 20px;
+    }
+
+}
