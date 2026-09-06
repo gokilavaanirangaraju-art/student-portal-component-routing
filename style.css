@@ -90,6 +90,12 @@ body {
 }
 
 
+header:not(.dashboard-header) nav a.active {
+    border-bottom: 2px solid currentColor;
+    font-weight: bold;
+}
+
+
 .navbar .logout {
     background: #ef4444;
 }
@@ -97,6 +103,55 @@ body {
 
 .navbar .logout:hover {
     background: #dc2626;
+}
+
+
+.feature-link {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.feature-link:hover {
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.18);
+    transform: translateY(-4px);
+}
+
+
+.success-message {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    border-radius: 6px;
+    margin: 0 0 18px;
+    padding: 10px 12px;
+}
+
+
+.form-status {
+    min-height: 20px;
+    margin: 0 0 12px;
+    color: #475569;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.form-status:not(.visible) {
+    visibility: hidden;
+}
+
+
+.error-status {
+    color: #b91c1c;
+}
+
+
+button:disabled {
+    cursor: wait;
+    opacity: 0.7;
 }
 
 
@@ -278,13 +333,6 @@ body {
 }
 
 
-.course-list button:disabled {
-    background: #cbd5e1;
-    cursor: not-allowed;
-    transform: scale(1);
-}
-
-
 /* =================================
    My Courses
 ================================= */
@@ -323,13 +371,6 @@ body {
 }
 
 
-.my-course-controls {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-
 .status {
     padding: 7px 12px;
 
@@ -350,28 +391,6 @@ body {
     background: #fef3c7;
 
     color: #b45309;
-}
-
-
-.study-button {
-    border: none;
-    background: #7c3aed;
-    color: white;
-    padding: 7px 13px;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-
-.study-button:hover {
-    background: #5b21b6;
-}
-
-
-.study-button:disabled {
-    background: #cbd5e1;
-    cursor: not-allowed;
 }
 
 
@@ -451,6 +470,13 @@ progress::-webkit-progress-value {
 }
 
 
+.view-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+
 .view-button:hover,
 .profile-button:hover {
     background: #5b21b6;
@@ -493,6 +519,75 @@ footer {
     color: white;
 
     line-height: 1.8;
+}
+
+
+/* =================================
+   Responsive Design
+================================= */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+
+    .dashboard-header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .welcome {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar a {
+        padding: 8px;
+
+        font-size: 13px;
+    }
+
+
+    .welcome {
+        width: 94%;
+
+        padding: 25px 15px;
+    }
+
+
+    .dashboard {
+        width: 94%;
+    }
+
+
+    .card {
+        padding: 20px;
+    }
+
 }
 
 
@@ -572,7 +667,6 @@ header:not(.dashboard-header) nav a.logout:hover {
     border-radius: 10px;
     font-weight: 600;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .btn:hover {
@@ -682,73 +776,4 @@ header:not(.dashboard-header) nav a.logout:hover {
     color: #4f46e5;
     font-weight: 600;
     text-decoration: none;
-}
-
-
-/* =================================
-   Responsive Design
-================================= */
-
-@media (max-width: 800px) {
-
-    .dashboard {
-        grid-template-columns: 1fr;
-    }
-
-
-    .dashboard-header {
-        flex-direction: column;
-
-        gap: 15px;
-    }
-
-
-    .navbar {
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-
-    .welcome {
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 20px;
-    }
-
-
-    .welcome h1 {
-        font-size: 25px;
-    }
-
-}
-
-
-@media (max-width: 500px) {
-
-    .navbar a {
-        padding: 8px;
-
-        font-size: 13px;
-    }
-
-
-    .welcome {
-        width: 94%;
-
-        padding: 25px 15px;
-    }
-
-
-    .dashboard {
-        width: 94%;
-    }
-
-
-    .card {
-        padding: 20px;
-    }
-
 }

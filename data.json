@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "System Administrator",
+      "email": "admin@college.com",
+      "password": "admin123",
+      "role": "admin",
+      "department": "Administration"
+    }
+  ],
+  "courses": [
+    {
+      "id": "html-css",
+      "icon": "🌐",
+      "name": "HTML & CSS",
+      "title": "HTML & CSS",
+      "instructor": "Ms. Nisha",
+      "duration": "6 weeks",
+      "description": "Build responsive web pages and style interfaces.",
+      "category": "Web"
+    },
+    {
+      "id": "javascript",
+      "icon": "💻",
+      "name": "JavaScript",
+      "title": "JavaScript",
+      "instructor": "Mr. Daniel",
+      "duration": "8 weeks",
+      "description": "Learn dynamic programming and browser logic.",
+      "category": "Programming"
+    },
+    {
+      "id": "python",
+      "icon": "🐍",
+      "name": "Python",
+      "title": "Python",
+      "instructor": "Ms. Ananya",
+      "duration": "8 weeks",
+      "description": "Master scripting, data handling, and automation.",
+      "category": "Programming"
+    },
+    {
+      "id": "java",
+      "icon": "☕",
+      "name": "Java Programming",
+      "title": "Java Programming",
+      "instructor": "Mr. Ravi",
+      "duration": "10 weeks",
+      "description": "Develop robust object-oriented software with Java.",
+      "category": "Programming"
+    },
+    {
+      "id": "sql",
+      "icon": "🗄️",
+      "name": "SQL & Databases",
+      "title": "SQL & Databases",
+      "instructor": "Ms. Priya",
+      "duration": "5 weeks",
+      "description": "Understand queries, schema design, and database optimization.",
+      "category": "Database"
+    },
+    {
+      "id": "react",
+      "icon": "⚛️",
+      "name": "React",
+      "title": "React",
+      "instructor": "Mr. Adarsh",
+      "duration": "7 weeks",
+      "description": "Create modern frontend interfaces with components and hooks.",
+      "category": "Web"
+    },
+    {
+      "id": "data-structures",
+      "icon": "🌳",
+      "name": "Data Structures",
+      "title": "Data Structures",
+      "instructor": "Dr. Meera",
+      "duration": "8 weeks",
+      "description": "Organize data efficiently with arrays, trees, graphs, and more.",
+      "category": "Computer Science"
+    },
+    {
+      "id": "c-programming",
+      "icon": "⚙️",
+      "name": "C Programming",
+      "title": "C Programming",
+      "instructor": "Mr. Karthik",
+      "duration": "7 weeks",
+      "description": "Learn programming fundamentals, memory, and problem solving in C.",
+      "category": "Programming"
+    },
+    {
+      "id": "git-github",
+      "icon": "🔧",
+      "name": "Git & GitHub",
+      "title": "Git & GitHub",
+      "instructor": "Ms. Divya",
+      "duration": "4 weeks",
+      "description": "Track changes, collaborate, and manage projects with Git and GitHub.",
+      "category": "Tools"
+    },
+    {
+      "id": "ui-ux-design",
+      "icon": "🎨",
+      "name": "UI/UX Design",
+      "title": "UI/UX Design",
+      "instructor": "Ms. Kavya",
+      "duration": "6 weeks",
+      "description": "Design clear, accessible, and user-friendly digital experiences.",
+      "category": "Design"
+    }
+  ],
+  "enrollments": {}
+}

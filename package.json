@@ -1,0 +1,10 @@
+{
+  "name": "student-course-registration-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Student course registration frontend and backend",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  }
+}
