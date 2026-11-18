@@ -160,7 +160,6 @@ router.navigate('/dashboard');
 - [ ] Discussion forums
 - [ ] Dark mode
 - [ ] Internationalization (i18n)
-- [ ] Certificate generation
 
 ## 📄 License
 
