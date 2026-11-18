@@ -1,0 +1,13 @@
+{
+  "name": "student-course-registration-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Student course registration frontend and backend",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.22.0"
+  }
+}
