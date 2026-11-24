@@ -8,6 +8,7 @@ import {
     checkLogin,
     protectDashboard
 } from "./navigation.js";
+import { initChatbot } from "./js/chatbot.js";
 
 import {
     getStudent,
@@ -157,3 +158,4 @@ function initializeRoute() {
 window.addEventListener("routechange", initializeRoute);
 
 startRouter();
+initChatbot();

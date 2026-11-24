@@ -11,6 +11,7 @@ A modern single-page application (SPA) built with vanilla JavaScript using a com
 - **Dashboard**: Personalized student dashboard with analytics
 - **State Management**: MongoDB persistence with a LocalStorage UI cache
 - **Responsive Design**: Mobile-friendly UI
+- **Portal Chatbot**: Floating assistant for course, account, and progress help
 
 ## 📁 Project Structure
 
